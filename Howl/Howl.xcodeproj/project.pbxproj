@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		558213541AE8B8750083636A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213531AE8B8750083636A /* AppDelegate.swift */; };
+		558213561AE8B8750083636A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213551AE8B8750083636A /* ViewController.swift */; };
+		558213591AE8B8750083636A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558213571AE8B8750083636A /* Main.storyboard */; };
+		5582135B1AE8B8750083636A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582135A1AE8B8750083636A /* Images.xcassets */; };
+		5582135E1AE8B8750083636A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5582135C1AE8B8750083636A /* LaunchScreen.xib */; };
+		5582136A1AE8B8760083636A /* HowlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213691AE8B8760083636A /* HowlTests.swift */; };
+		558213781AE8BA140083636A /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213771AE8BA140083636A /* Business.swift */; };
+		5582137A1AE8BA290083636A /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213791AE8BA290083636A /* YelpClient.swift */; };
+		F10BF91A956DA7740C77A745 /* libPods-Howl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D10A8A437A881603A05C15 /* libPods-Howl.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		558213641AE8B8760083636A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 558213461AE8B8750083636A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5582134D1AE8B8750083636A;
+			remoteInfo = Howl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16D10A8A437A881603A05C15 /* libPods-Howl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Howl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		557C4BFB1AE8BB7700D3944F /* Howl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Howl-Bridging-Header.h"; sourceTree = "<group>"; };
+		5582134E1AE8B8750083636A /* Howl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		558213521AE8B8750083636A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		558213531AE8B8750083636A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		558213551AE8B8750083636A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		558213581AE8B8750083636A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5582135A1AE8B8750083636A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5582135D1AE8B8750083636A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		558213631AE8B8760083636A /* HowlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		558213681AE8B8760083636A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		558213691AE8B8760083636A /* HowlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowlTests.swift; sourceTree = "<group>"; };
+		558213771AE8BA140083636A /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Business.swift; path = Howl/Models/Business.swift; sourceTree = SOURCE_ROOT; };
+		558213791AE8BA290083636A /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
+		8065CBEF54BA31F8F846AEC2 /* Pods-Howl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Howl/Pods-Howl.debug.xcconfig"; sourceTree = "<group>"; };
+		FAFE84234711C568A0F96F8C /* Pods-Howl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howl.release.xcconfig"; path = "Pods/Target Support Files/Pods-Howl/Pods-Howl.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5582134B1AE8B8750083636A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10BF91A956DA7740C77A745 /* libPods-Howl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		558213601AE8B8760083636A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		159A62D29D94F554050DABC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8065CBEF54BA31F8F846AEC2 /* Pods-Howl.debug.xcconfig */,
+				FAFE84234711C568A0F96F8C /* Pods-Howl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		558213451AE8B8750083636A = {
+			isa = PBXGroup;
+			children = (
+				558213501AE8B8750083636A /* Howl */,
+				558213661AE8B8760083636A /* HowlTests */,
+				5582134F1AE8B8750083636A /* Products */,
+				159A62D29D94F554050DABC4 /* Pods */,
+				C9F84DBFAA0BF2694903BBC7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5582134F1AE8B8750083636A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5582134E1AE8B8750083636A /* Howl.app */,
+				558213631AE8B8760083636A /* HowlTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		558213501AE8B8750083636A /* Howl */ = {
+			isa = PBXGroup;
+			children = (
+				558213761AE8B9A50083636A /* API */,
+				558213731AE8B87F0083636A /* Models */,
+				558213531AE8B8750083636A /* AppDelegate.swift */,
+				558213551AE8B8750083636A /* ViewController.swift */,
+				558213571AE8B8750083636A /* Main.storyboard */,
+				5582135A1AE8B8750083636A /* Images.xcassets */,
+				5582135C1AE8B8750083636A /* LaunchScreen.xib */,
+				558213511AE8B8750083636A /* Supporting Files */,
+				557C4BFB1AE8BB7700D3944F /* Howl-Bridging-Header.h */,
+			);
+			path = Howl;
+			sourceTree = "<group>";
+		};
+		558213511AE8B8750083636A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				558213521AE8B8750083636A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		558213661AE8B8760083636A /* HowlTests */ = {
+			isa = PBXGroup;
+			children = (
+				558213691AE8B8760083636A /* HowlTests.swift */,
+				558213671AE8B8760083636A /* Supporting Files */,
+			);
+			path = HowlTests;
+			sourceTree = "<group>";
+		};
+		558213671AE8B8760083636A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				558213681AE8B8760083636A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		558213731AE8B87F0083636A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				558213771AE8BA140083636A /* Business.swift */,
+			);
+			name = Models;
+			path = API;
+			sourceTree = "<group>";
+		};
+		558213761AE8B9A50083636A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				558213791AE8BA290083636A /* YelpClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		C9F84DBFAA0BF2694903BBC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16D10A8A437A881603A05C15 /* libPods-Howl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5582134D1AE8B8750083636A /* Howl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5582136D1AE8B8760083636A /* Build configuration list for PBXNativeTarget "Howl" */;
+			buildPhases = (
+				371422A214E65B8C2632AC10 /* Check Pods Manifest.lock */,
+				5582134A1AE8B8750083636A /* Sources */,
+				5582134B1AE8B8750083636A /* Frameworks */,
+				5582134C1AE8B8750083636A /* Resources */,
+				10E87D63451DDDFA4C872B6E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Howl;
+			productName = Howl;
+			productReference = 5582134E1AE8B8750083636A /* Howl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		558213621AE8B8760083636A /* HowlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 558213701AE8B8760083636A /* Build configuration list for PBXNativeTarget "HowlTests" */;
+			buildPhases = (
+				5582135F1AE8B8760083636A /* Sources */,
+				558213601AE8B8760083636A /* Frameworks */,
+				558213611AE8B8760083636A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				558213651AE8B8760083636A /* PBXTargetDependency */,
+			);
+			name = HowlTests;
+			productName = HowlTests;
+			productReference = 558213631AE8B8760083636A /* HowlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		558213461AE8B8750083636A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = rateva;
+				TargetAttributes = {
+					5582134D1AE8B8750083636A = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					558213621AE8B8760083636A = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 5582134D1AE8B8750083636A;
+					};
+				};
+			};
+			buildConfigurationList = 558213491AE8B8750083636A /* Build configuration list for PBXProject "Howl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 558213451AE8B8750083636A;
+			productRefGroup = 5582134F1AE8B8750083636A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5582134D1AE8B8750083636A /* Howl */,
+				558213621AE8B8760083636A /* HowlTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5582134C1AE8B8750083636A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				558213591AE8B8750083636A /* Main.storyboard in Resources */,
+				5582135E1AE8B8750083636A /* LaunchScreen.xib in Resources */,
+				5582135B1AE8B8750083636A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		558213611AE8B8760083636A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10E87D63451DDDFA4C872B6E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Howl/Pods-Howl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		371422A214E65B8C2632AC10 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5582134A1AE8B8750083636A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5582137A1AE8BA290083636A /* YelpClient.swift in Sources */,
+				558213781AE8BA140083636A /* Business.swift in Sources */,
+				558213561AE8B8750083636A /* ViewController.swift in Sources */,
+				558213541AE8B8750083636A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5582135F1AE8B8760083636A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5582136A1AE8B8760083636A /* HowlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		558213651AE8B8760083636A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5582134D1AE8B8750083636A /* Howl */;
+			targetProxy = 558213641AE8B8760083636A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		558213571AE8B8750083636A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				558213581AE8B8750083636A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5582135C1AE8B8750083636A /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5582135D1AE8B8750083636A /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5582136B1AE8B8760083636A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5582136C1AE8B8760083636A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5582136E1AE8B8760083636A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8065CBEF54BA31F8F846AEC2 /* Pods-Howl.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Howl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Howl/Howl-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5582136F1AE8B8760083636A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAFE84234711C568A0F96F8C /* Pods-Howl.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Howl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Howl/Howl-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		558213711AE8B8760083636A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HowlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Howl.app/Howl";
+			};
+			name = Debug;
+		};
+		558213721AE8B8760083636A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HowlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Howl.app/Howl";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		558213491AE8B8750083636A /* Build configuration list for PBXProject "Howl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5582136B1AE8B8760083636A /* Debug */,
+				5582136C1AE8B8760083636A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5582136D1AE8B8760083636A /* Build configuration list for PBXNativeTarget "Howl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5582136E1AE8B8760083636A /* Debug */,
+				5582136F1AE8B8760083636A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		558213701AE8B8760083636A /* Build configuration list for PBXNativeTarget "HowlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				558213711AE8B8760083636A /* Debug */,
+				558213721AE8B8760083636A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 558213461AE8B8750083636A /* Project object */;
+}

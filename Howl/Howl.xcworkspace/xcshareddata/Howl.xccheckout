@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>722C41CC-E349-4BAB-93E2-56B6398D006F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Howl</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>211F5DD75B7D9A4494D69DEC94F3123F2ACA4790</key>
+		<string>github.com:raulagrait/ios-howl.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Howl/Howl.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>211F5DD75B7D9A4494D69DEC94F3123F2ACA4790</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:raulagrait/ios-howl.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>211F5DD75B7D9A4494D69DEC94F3123F2ACA4790</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>211F5DD75B7D9A4494D69DEC94F3123F2ACA4790</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-howl</string>
+		</dict>
+	</array>
+</dict>
+</plist>
