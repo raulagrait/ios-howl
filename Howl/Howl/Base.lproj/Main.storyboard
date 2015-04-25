@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Businesses View Controller-->
@@ -15,8 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qIf-ra-JYU">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qIf-ra-JYU" secondAttribute="bottom" id="Dr5-ji-boL"/>
+                            <constraint firstItem="qIf-ra-JYU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="FSb-Ru-oJl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qIf-ra-JYU" secondAttribute="trailing" id="dqU-zo-hel"/>
+                            <constraint firstItem="qIf-ra-JYU" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="duU-8T-zr4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="qIf-ra-JYU" id="tPA-uu-9Un"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

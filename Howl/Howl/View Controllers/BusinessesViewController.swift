@@ -10,14 +10,38 @@ import UIKit
 
 class BusinessesViewController: UIViewController {
     
-    var businesses: [Business]?
+    // MARK: - Data
+    
+    var businessesDataSource: BusinessesDataSource!
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+
+    // MARK: - UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        businessesDataSource = BusinessesDataSource()
+        tableView.dataSource = businessesDataSource
+        
+        load()
+    }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Networking
+    
+    func load() {
         Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["thai", "mexican"], deals: true) { (businesses: [Business]?, error: NSError!) -> Void in
             if let businesses = businesses {
-                self.businesses = businesses
+                self.businessesDataSource.businesses = businesses
+                self.tableView.reloadData()
+                
                 for business in businesses {
                     println("name = \(business.name) address = \(business.address)")
                 }
@@ -25,10 +49,6 @@ class BusinessesViewController: UIViewController {
                 println(error)
             }
         }
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     /*
