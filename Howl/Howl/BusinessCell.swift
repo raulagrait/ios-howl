@@ -53,5 +53,11 @@ class BusinessCell: UITableViewCell {
         }
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        thumbnailImageView.layer.cornerRadius = 3
+        thumbnailImageView.clipsToBounds = true
+    }
+    
     
 }
