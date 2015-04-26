@@ -24,6 +24,12 @@ class FiltersViewController: UIViewController {
         }
     }
     
+    var sortMode: YelpSortMode {
+        didSet {
+            filtersDataSource.sortMode = sortMode
+        }
+    }
+    
     var filtersDataSource: FiltersDataSource!
     var filtersTableViewDelegate: FiltersTableViewDelegate!
 
@@ -35,6 +41,7 @@ class FiltersViewController: UIViewController {
     
     required init(coder aDecoder: NSCoder) {
         hasDeals = false
+        sortMode = YelpSortMode.BestMatched
         filtersDataSource = FiltersDataSource()
         filtersTableViewDelegate = FiltersTableViewDelegate()
         super.init(coder: aDecoder)
@@ -68,6 +75,7 @@ class FiltersViewController: UIViewController {
         
         var filters = [String: AnyObject]()
         filters["hasDeals"] = filtersDataSource.hasDeals
+        filters["sortMode"] = filtersDataSource.sortMode.rawValue
         delegate?.filtersViewController?(self, didUpdateFilters: filters)
         
         dismissViewControllerAnimated(true, completion: nil)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate {
+class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate, SortCellDelegate {
     
     var sectionHeaders: [String]!
     var sortOptionTitles: [String]!
@@ -32,10 +32,12 @@ class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate {
             return switchCell
         case 2:
             var distanceCell = tableView.dequeueReusableCellWithIdentifier("SortCell", forIndexPath: indexPath) as! SortCell
+            distanceCell.indexPath = indexPath
             var index = indexPath.row
             distanceCell.textLabel?.text = sortOptionTitles[index]
             var accessoryType = (sortMode.rawValue == index) ? UITableViewCellAccessoryType.Checkmark : UITableViewCellAccessoryType.None
             distanceCell.accessoryType = accessoryType
+            distanceCell.delegate = self
             return distanceCell;
         default:
             return UITableViewCell()
@@ -64,5 +66,10 @@ class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate {
     func switchCell(switchCell: SwitchCell, didChangeValue value: Bool) {
         hasDeals = value
         println(hasDeals)
+    }
+    
+    func sortCell(sortCell: SortCell, didChangeSelectedIndex index: Int) {
+        sortMode = YelpSortMode(rawValue: index)!
+        println(sortMode.rawValue)
     }
 }

@@ -8,8 +8,16 @@
 
 import UIKit
 
-class SortCell: UITableViewCell {
+@objc protocol SortCellDelegate {
+    optional func sortCell(sortCell: SortCell, didChangeSelectedIndex index: Int)
+}
 
+class SortCell: UITableViewCell {
+    
+    var indexPath: NSIndexPath?
+    
+    weak var delegate: SortCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,7 +26,10 @@ class SortCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        if selected {
+            if let indexPath = indexPath {
+                delegate?.sortCell?(self, didChangeSelectedIndex: indexPath.row)
+            }
+        }
     }
-    
 }

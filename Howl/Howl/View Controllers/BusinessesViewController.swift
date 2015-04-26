@@ -18,11 +18,8 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         }
     }
     
-    var hasDeals: Bool! {
-        didSet {
-            load()
-        }
-    }
+    var hasDeals: Bool!
+    var sortMode: YelpSortMode!
     
     var businessesTableViewDelegate: BusinessesTableViewDelegate!
     var businessesDataSource: BusinessesDataSource!
@@ -40,6 +37,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
     required init(coder aDecoder: NSCoder) {
         searchTerm = ""
         hasDeals = false
+        sortMode = YelpSortMode.BestMatched
         
         businessesDataSource = BusinessesDataSource()
         businessesTableViewDelegate = BusinessesTableViewDelegate()
@@ -84,13 +82,13 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
     // MARK: - Networking
     
     func load() {
-        Business.searchWithTerm(searchTerm, sort: .Distance, categories: nil, deals: hasDeals) { (businesses: [Business]?, error: NSError!) -> Void in
+        Business.searchWithTerm(searchTerm, sort: sortMode, categories: nil, deals: hasDeals) { (businesses: [Business]?, error: NSError!) -> Void in
             if let businesses = businesses {
                 self.businessesDataSource.businesses = businesses
                 self.tableView.reloadData()
                 
                 for business in businesses {
-                    println("name = \(business.name) address = \(business.address)")
+                    //println("name = \(business.name) address = \(business.address)")
                 }
             } else {
                 println(error)
@@ -104,6 +102,10 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         if let hasDeals = filters["hasDeals"] as? Bool {
             self.hasDeals = hasDeals
         }
+        if let sortMode = filters["sortMode"] as? Int {
+            self.sortMode = YelpSortMode(rawValue: sortMode)
+        }
+        load()
     }
     
     // MARK: - Navigation
@@ -115,6 +117,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         var filtersViewController = navigationController.topViewController as! FiltersViewController
         filtersViewController.delegate = self
         filtersViewController.hasDeals = hasDeals
+        filtersViewController.sortMode = sortMode
         
         // Pass the selected object to the new view controller.
     }
