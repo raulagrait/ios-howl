@@ -170,6 +170,12 @@
                                 <action selector="onCancelTouched:" destination="rxv-kZ-fiw" id="tBb-wt-VI0"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="zH4-Jk-MQi">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="onSearchTouched:" destination="rxv-kZ-fiw" id="MZN-sM-Rex"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="nzr-q1-gaC" id="hvN-I8-nZl"/>

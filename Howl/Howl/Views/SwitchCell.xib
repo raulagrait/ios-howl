@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" id="KGk-i7-Jjw" customClass="SwitchCell" customModule="Howl" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nhy-2j-WEq">
+                        <rect key="frame" x="253" y="6" width="51" height="31"/>
+                        <connections>
+                            <action selector="onSwitchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="x4k-Du-lfO"/>
+                        </connections>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4g-Da-t03">
+                        <rect key="frame" x="18" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="Nhy-2j-WEq" secondAttribute="centerY" id="AH1-NR-hzY"/>
+                    <constraint firstAttribute="trailing" secondItem="Nhy-2j-WEq" secondAttribute="trailing" constant="18" id="JBS-D5-N5C"/>
+                    <constraint firstAttribute="trailing" secondItem="Nhy-2j-WEq" secondAttribute="trailing" constant="8" id="drw-4n-SQc"/>
+                    <constraint firstItem="W4g-Da-t03" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lVU-b5-ZRz"/>
+                    <constraint firstItem="W4g-Da-t03" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="mAX-DJ-irE"/>
+                    <constraint firstAttribute="centerY" secondItem="W4g-Da-t03" secondAttribute="centerY" id="t0k-BG-NDk"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="lVU-b5-ZRz"/>
+                        <exclude reference="drw-4n-SQc"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellSwitch" destination="Nhy-2j-WEq" id="qnU-AL-iEG"/>
+                <outlet property="switchLabel" destination="W4g-Da-t03" id="l64-fC-HTt"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

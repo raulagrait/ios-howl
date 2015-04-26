@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UISearchBarDelegate {
+class BusinessesViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, FiltersViewControllerDelegate {
     
     // MARK: - Data
     
@@ -50,6 +50,8 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate {
         
         businessesDataSource = BusinessesDataSource()
         tableView.dataSource = businessesDataSource
+        
+        tableView.delegate = self
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
@@ -93,14 +95,25 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
-    /*
+    // MARK: - FiltersViewControllerDelegate
+    
+    func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String : AnyObject]) {
+        if let hasDeals = filters["hasDeals"] as? Bool {
+            self.hasDeals = hasDeals
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
+        var navigationController = segue.destinationViewController as! UINavigationController
+        var filtersViewController = navigationController.topViewController as! FiltersViewController
+        filtersViewController.delegate = self
+        filtersViewController.hasDeals = hasDeals
+        
         // Pass the selected object to the new view controller.
     }
-    */
 
 }

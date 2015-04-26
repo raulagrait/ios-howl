@@ -8,9 +8,21 @@
 
 import UIKit
 
+@objc protocol FiltersViewControllerDelegate {
+    optional func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String: AnyObject])
+}
+
 class FiltersViewController: UIViewController {
     
     // MARK: - Data
+    
+    weak var delegate: FiltersViewControllerDelegate?
+    
+    var hasDeals: Bool {
+        didSet {
+            filtersDataSource.hasDeals = hasDeals
+        }
+    }
     
     var filtersDataSource: FiltersDataSource!
 
@@ -18,13 +30,20 @@ class FiltersViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - UIViewController
+    
+    required init(coder aDecoder: NSCoder) {
+        hasDeals = false
+        filtersDataSource = FiltersDataSource()
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
 
-        filtersDataSource = FiltersDataSource()
         tableView.dataSource = filtersDataSource
+        tableView.registerNib(UINib(nibName: "SwitchCell", bundle: nil), forCellReuseIdentifier: "SwitchCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +56,15 @@ class FiltersViewController: UIViewController {
     }
     
     @IBAction func onCancelTouched(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func onSearchTouched(sender: AnyObject) {
+        
+        var filters = [String: AnyObject]()
+        filters["hasDeals"] = filtersDataSource.hasDeals
+        delegate?.filtersViewController?(self, didUpdateFilters: filters)
+        
         dismissViewControllerAnimated(true, completion: nil)
     }
 

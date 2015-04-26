@@ -8,9 +8,11 @@
 
 import UIKit
 
-class FiltersDataSource: NSObject, UITableViewDataSource {
+class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate {
     
     var sectionHeaders: [String]!
+    
+    var hasDeals: Bool = false
     
     override init() {
         sectionHeaders = [ "Most Popular", "Distance", "Sort By", "Categories"]
@@ -18,7 +20,16 @@ class FiltersDataSource: NSObject, UITableViewDataSource {
    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        return UITableViewCell()
+        switch indexPath.section {
+        case 0:
+            var switchCell = tableView.dequeueReusableCellWithIdentifier("SwitchCell", forIndexPath: indexPath) as! SwitchCell
+            switchCell.switchLabel.text = "Offering a Deal"
+            switchCell.cellSwitch.on = hasDeals
+            switchCell.delegate = self
+            return switchCell
+        default:
+            return UITableViewCell()
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,6 +42,11 @@ class FiltersDataSource: NSObject, UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return sectionHeaders.count
+    }
+    
+    func switchCell(switchCell: SwitchCell, didChangeValue value: Bool) {
+        hasDeals = value
+        println(hasDeals)
     }
     
 }

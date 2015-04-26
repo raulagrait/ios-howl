@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesDataSource: NSObject, UITableViewDataSource {
+class BusinessesDataSource: NSObject, UITableViewDataSource{
     
     var businesses: [Business]?
     
