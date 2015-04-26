@@ -9,12 +9,22 @@
 import UIKit
 
 class FiltersViewController: UIViewController {
+    
+    // MARK: - Data
+    
+    var filtersDataSource: FiltersDataSource!
 
+    // MARK: - Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
 
-        // Do any additional setup after loading the view.
+        filtersDataSource = FiltersDataSource()
+        tableView.dataSource = filtersDataSource
     }
 
     override func didReceiveMemoryWarning() {

@@ -149,7 +149,19 @@
                     <view key="view" contentMode="scaleToFill" id="Mwj-o9-DUT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="nzr-q1-gaC">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nzr-q1-gaC" firstAttribute="leading" secondItem="Mwj-o9-DUT" secondAttribute="leading" id="7o3-oT-Xx1"/>
+                            <constraint firstItem="Xmw-EO-7lZ" firstAttribute="top" secondItem="nzr-q1-gaC" secondAttribute="bottom" id="FeH-0t-MOV"/>
+                            <constraint firstItem="nzr-q1-gaC" firstAttribute="top" secondItem="2t4-xg-A2k" secondAttribute="bottom" id="Q98-Rd-fTA"/>
+                            <constraint firstAttribute="trailing" secondItem="nzr-q1-gaC" secondAttribute="trailing" id="cyj-OC-VW0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Filters" id="bvx-JN-X1t">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="fy3-5b-pAp">
@@ -159,6 +171,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="nzr-q1-gaC" id="hvN-I8-nZl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pJ9-BV-PyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,7 @@
 		551A04191AEB6C890085A9A5 /* BusinessesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A04181AEB6C890085A9A5 /* BusinessesDataSource.swift */; };
 		551A041C1AEC67900085A9A5 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A041B1AEC67900085A9A5 /* BusinessCell.swift */; };
 		551A041E1AECC9630085A9A5 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A041D1AECC9630085A9A5 /* FiltersViewController.swift */; };
+		551A04201AED4CC80085A9A5 /* FiltersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A041F1AED4CC80085A9A5 /* FiltersDataSource.swift */; };
 		558213541AE8B8750083636A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213531AE8B8750083636A /* AppDelegate.swift */; };
 		558213591AE8B8750083636A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558213571AE8B8750083636A /* Main.storyboard */; };
 		5582135B1AE8B8750083636A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582135A1AE8B8750083636A /* Images.xcassets */; };
@@ -37,6 +38,7 @@
 		551A04181AEB6C890085A9A5 /* BusinessesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesDataSource.swift; sourceTree = "<group>"; };
 		551A041B1AEC67900085A9A5 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		551A041D1AECC9630085A9A5 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		551A041F1AED4CC80085A9A5 /* FiltersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersDataSource.swift; sourceTree = "<group>"; };
 		557C4BFB1AE8BB7700D3944F /* Howl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Howl-Bridging-Header.h"; sourceTree = "<group>"; };
 		5582134E1AE8B8750083636A /* Howl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558213521AE8B8750083636A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				551A04181AEB6C890085A9A5 /* BusinessesDataSource.swift */,
+				551A041F1AED4CC80085A9A5 /* FiltersDataSource.swift */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				551A04191AEB6C890085A9A5 /* BusinessesDataSource.swift in Sources */,
 				558213781AE8BA140083636A /* Business.swift in Sources */,
 				558213541AE8B8750083636A /* AppDelegate.swift in Sources */,
+				551A04201AED4CC80085A9A5 /* FiltersDataSource.swift in Sources */,
 				551A041C1AEC67900085A9A5 /* BusinessCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
