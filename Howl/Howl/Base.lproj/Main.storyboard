@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Howl-->
+        <!--Businesses View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="BusinessesViewController" customModule="Howl" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,11 +78,11 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oYP-s4-zCP" secondAttribute="bottom" constant="12" id="0BO-yN-7yl"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oYP-s4-zCP" secondAttribute="bottom" constant="8" id="0BO-yN-7yl"/>
                                                 <constraint firstAttribute="trailing" secondItem="kue-ZO-y1e" secondAttribute="trailing" constant="8" id="2CU-NQ-HAi"/>
                                                 <constraint firstItem="Zuj-OV-Xis" firstAttribute="top" secondItem="oen-Mf-eDy" secondAttribute="bottom" id="2KA-22-uhW"/>
                                                 <constraint firstItem="kue-ZO-y1e" firstAttribute="top" secondItem="rNR-6H-rc3" secondAttribute="top" constant="12" id="4Nd-wr-Wz9"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zuj-OV-Xis" secondAttribute="bottom" constant="12" id="AR7-sz-FWQ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zuj-OV-Xis" secondAttribute="bottom" constant="8" id="AR7-sz-FWQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="oen-Mf-eDy" secondAttribute="trailing" constant="8" id="Abc-9B-i46"/>
                                                 <constraint firstItem="YNk-9D-6Gi" firstAttribute="top" secondItem="kue-ZO-y1e" secondAttribute="bottom" constant="2" id="AeJ-Bu-cLk"/>
                                                 <constraint firstItem="Xu8-3d-YkP" firstAttribute="leading" secondItem="oYP-s4-zCP" secondAttribute="trailing" constant="8" id="BJ2-5x-Tin"/>
@@ -121,7 +121,7 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qIf-ra-JYU" secondAttribute="bottom" id="vwF-he-Pmq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Howl" id="LN1-aw-pE7"/>
+                    <navigationItem key="navigationItem" id="LN1-aw-pE7"/>
                     <connections>
                         <outlet property="tableView" destination="qIf-ra-JYU" id="tPA-uu-9Un"/>
                     </connections>

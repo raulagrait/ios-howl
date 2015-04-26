@@ -8,20 +8,28 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController {
+class BusinessesViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: - Data
     
+    var searchTerm: String!
     var businessesDataSource: BusinessesDataSource!
 
     // MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: - Views
+    
+    var searchBar: UISearchBar!
 
     // MARK: - UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchTerm = ""
+        initializeSearchBar()
         
         businessesDataSource = BusinessesDataSource()
         tableView.dataSource = businessesDataSource
@@ -36,11 +44,25 @@ class BusinessesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    func initializeSearchBar() {
+        searchBar = UISearchBar()
+        searchBar.delegate = self
+        navigationItem.titleView = searchBar
+    }
+    
+    // MARK: - UISearchBarDelegate
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        println(searchBar.text)
+        searchTerm = searchBar.text
+        load()
+    }
     
     // MARK: - Networking
     
     func load() {
-        Business.searchWithTerm("Restaurants", sort: .Distance, categories: ["thai", "mexican"], deals: true) { (businesses: [Business]?, error: NSError!) -> Void in
+        Business.searchWithTerm(searchTerm, sort: .Distance, categories: nil, deals: false) { (businesses: [Business]?, error: NSError!) -> Void in
             if let businesses = businesses {
                 self.businessesDataSource.businesses = businesses
                 self.tableView.reloadData()
