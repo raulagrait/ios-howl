@@ -14,6 +14,7 @@
 		551A04201AED4CC80085A9A5 /* FiltersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A041F1AED4CC80085A9A5 /* FiltersDataSource.swift */; };
 		551A04231AED6C7F0085A9A5 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A04211AED6C7F0085A9A5 /* SwitchCell.swift */; };
 		551A04241AED6C7F0085A9A5 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 551A04221AED6C7F0085A9A5 /* SwitchCell.xib */; };
+		551A04261AED7C910085A9A5 /* BusinessesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A04251AED7C910085A9A5 /* BusinessesDelegate.swift */; };
 		558213541AE8B8750083636A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213531AE8B8750083636A /* AppDelegate.swift */; };
 		558213591AE8B8750083636A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558213571AE8B8750083636A /* Main.storyboard */; };
 		5582135B1AE8B8750083636A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582135A1AE8B8750083636A /* Images.xcassets */; };
@@ -43,6 +44,7 @@
 		551A041F1AED4CC80085A9A5 /* FiltersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersDataSource.swift; sourceTree = "<group>"; };
 		551A04211AED6C7F0085A9A5 /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 		551A04221AED6C7F0085A9A5 /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchCell.xib; sourceTree = "<group>"; };
+		551A04251AED7C910085A9A5 /* BusinessesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesDelegate.swift; sourceTree = "<group>"; };
 		557C4BFB1AE8BB7700D3944F /* Howl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Howl-Bridging-Header.h"; sourceTree = "<group>"; };
 		5582134E1AE8B8750083636A /* Howl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558213521AE8B8750083636A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				551A041B1AEC67900085A9A5 /* BusinessCell.swift */,
 				551A04211AED6C7F0085A9A5 /* SwitchCell.swift */,
 				551A04221AED6C7F0085A9A5 /* SwitchCell.xib */,
+				551A04251AED7C910085A9A5 /* BusinessesDelegate.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				551A041E1AECC9630085A9A5 /* FiltersViewController.swift in Sources */,
 				551A04191AEB6C890085A9A5 /* BusinessesDataSource.swift in Sources */,
 				558213781AE8BA140083636A /* Business.swift in Sources */,
+				551A04261AED7C910085A9A5 /* BusinessesDelegate.swift in Sources */,
 				558213541AE8B8750083636A /* AppDelegate.swift in Sources */,
 				551A04201AED4CC80085A9A5 /* FiltersDataSource.swift in Sources */,
 				551A041C1AEC67900085A9A5 /* BusinessCell.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, FiltersViewControllerDelegate {
+class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersViewControllerDelegate {
     
     // MARK: - Data
     
@@ -24,6 +24,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, UITableVi
         }
     }
     
+    var businessesDelegate: BusinessesDelegate!
     var businessesDataSource: BusinessesDataSource!
 
     // MARK: - Outlets
@@ -39,6 +40,10 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, UITableVi
     required init(coder aDecoder: NSCoder) {
         searchTerm = ""
         hasDeals = false
+        
+        businessesDataSource = BusinessesDataSource()
+        businessesDelegate = BusinessesDelegate()
+        
         super.init(coder: aDecoder)
     }
     
@@ -48,10 +53,8 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, UITableVi
         
         initializeSearchBar()
         
-        businessesDataSource = BusinessesDataSource()
         tableView.dataSource = businessesDataSource
-        
-        tableView.delegate = self
+        tableView.delegate = businessesDelegate
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
@@ -115,5 +118,6 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, UITableVi
         
         // Pass the selected object to the new view controller.
     }
+
 
 }

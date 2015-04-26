@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -29,22 +29,20 @@
                 <constraints>
                     <constraint firstAttribute="centerY" secondItem="Nhy-2j-WEq" secondAttribute="centerY" id="AH1-NR-hzY"/>
                     <constraint firstAttribute="trailing" secondItem="Nhy-2j-WEq" secondAttribute="trailing" constant="18" id="JBS-D5-N5C"/>
-                    <constraint firstAttribute="trailing" secondItem="Nhy-2j-WEq" secondAttribute="trailing" constant="8" id="drw-4n-SQc"/>
-                    <constraint firstItem="W4g-Da-t03" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="lVU-b5-ZRz"/>
                     <constraint firstItem="W4g-Da-t03" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="mAX-DJ-irE"/>
                     <constraint firstAttribute="centerY" secondItem="W4g-Da-t03" secondAttribute="centerY" id="t0k-BG-NDk"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="lVU-b5-ZRz"/>
-                        <exclude reference="drw-4n-SQc"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cellSwitch" destination="Nhy-2j-WEq" id="qnU-AL-iEG"/>
                 <outlet property="switchLabel" destination="W4g-Da-t03" id="l64-fC-HTt"/>
             </connections>
+            <point key="canvasLocation" x="517" y="372"/>
         </tableViewCell>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
