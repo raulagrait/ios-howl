@@ -26,8 +26,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7J-aK-68o" id="rNR-6H-rc3">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYP-s4-zCP">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oYP-s4-zCP">
                                                     <rect key="frame" x="8" y="8" width="65" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="70E-Ft-Lv3"/>
+                                                        <constraint firstAttribute="width" constant="65" id="uZ3-HM-5mB"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7s5-ts-PNc">
                                                     <rect key="frame" x="81" y="30" width="83" height="15"/>
@@ -69,6 +73,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oYP-s4-zCP" secondAttribute="bottom" constant="12" id="0BO-yN-7yl"/>
+                                                <constraint firstItem="oYP-s4-zCP" firstAttribute="top" secondItem="rNR-6H-rc3" secondAttribute="top" constant="8" id="Rh1-GV-KgR"/>
+                                                <constraint firstItem="oYP-s4-zCP" firstAttribute="leading" secondItem="rNR-6H-rc3" secondAttribute="leading" constant="8" id="pW2-IH-yVs"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLabel" destination="oen-Mf-eDy" id="UDz-Gd-qeE"/>

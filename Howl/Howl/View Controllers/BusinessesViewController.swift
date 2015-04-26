@@ -26,6 +26,9 @@ class BusinessesViewController: UIViewController {
         businessesDataSource = BusinessesDataSource()
         tableView.dataSource = businessesDataSource
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 120
+        
         load()
     }
 
