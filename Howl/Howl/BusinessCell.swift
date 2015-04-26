@@ -23,7 +23,7 @@ class BusinessCell: UITableViewCell {
         didSet {
             if let business = business {
                 if let imageUrl = business.imageUrl {
-                    
+                    thumbnailImageView.setImageWithURL(imageUrl)
                 }
                 
                 if let name = business.name {
@@ -35,11 +35,11 @@ class BusinessCell: UITableViewCell {
                 }
                 
                 if let ratingImageUrl = business.ratingImageUrl {
-                    
+                    ratingImageView.setImageWithURL(ratingImageUrl)
                 }
                 
                 if let reviewCount = business.reviewCount {
-                    
+                    reviewCountLabel.text = "\(reviewCount) Reviews"
                 }
                 
                 if let address = business.address {

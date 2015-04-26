@@ -73,7 +73,7 @@ class Business {
     }
     
     func initRatingImageUrl(dictionary: NSDictionary) {
-        if let ratingImageUrlString = dictionary["rating_img_url_Large"] as? String {
+        if let ratingImageUrlString = dictionary["rating_img_url_large"] as? String {
             ratingImageUrl = NSURL(string: ratingImageUrlString)
         }
     }
