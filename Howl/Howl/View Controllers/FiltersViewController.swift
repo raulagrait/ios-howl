@@ -25,6 +25,7 @@ class FiltersViewController: UIViewController {
     }
     
     var filtersDataSource: FiltersDataSource!
+    var filtersTableViewDelegate: FiltersTableViewDelegate!
 
     // MARK: - Outlets
     
@@ -35,6 +36,7 @@ class FiltersViewController: UIViewController {
     required init(coder aDecoder: NSCoder) {
         hasDeals = false
         filtersDataSource = FiltersDataSource()
+        filtersTableViewDelegate = FiltersTableViewDelegate()
         super.init(coder: aDecoder)
     }
     
@@ -43,7 +45,10 @@ class FiltersViewController: UIViewController {
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
 
         tableView.dataSource = filtersDataSource
+        tableView.delegate = filtersTableViewDelegate
+        
         tableView.registerNib(UINib(nibName: "SwitchCell", bundle: nil), forCellReuseIdentifier: "SwitchCell")
+        tableView.registerNib(UINib(nibName: "SortCell", bundle: nil), forCellReuseIdentifier: "SortCell")
     }
 
     override func didReceiveMemoryWarning() {

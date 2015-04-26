@@ -11,11 +11,14 @@ import UIKit
 class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate {
     
     var sectionHeaders: [String]!
+    var sortOptionTitles: [String]!
     
     var hasDeals: Bool = false
+    var sortMode: YelpSortMode = .BestMatched
     
     override init() {
         sectionHeaders = [ "Most Popular", "Distance", "Sort By", "Categories"]
+        sortOptionTitles = ["Best Matched", "Distance", "Highest Rated"]
     }
    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -27,13 +30,27 @@ class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate {
             switchCell.cellSwitch.on = hasDeals
             switchCell.delegate = self
             return switchCell
+        case 2:
+            var distanceCell = tableView.dequeueReusableCellWithIdentifier("SortCell", forIndexPath: indexPath) as! SortCell
+            var index = indexPath.row
+            distanceCell.textLabel?.text = sortOptionTitles[index]
+            var accessoryType = (sortMode.rawValue == index) ? UITableViewCellAccessoryType.Checkmark : UITableViewCellAccessoryType.None
+            distanceCell.accessoryType = accessoryType
+            return distanceCell;
         default:
             return UITableViewCell()
         }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch section {
+        case 0:
+            return 1
+        case 2:
+            return sortOptionTitles.count
+        default:
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -48,5 +65,4 @@ class FiltersDataSource: NSObject, UITableViewDataSource, SwitchCellDelegate {
         hasDeals = value
         println(hasDeals)
     }
-    
 }

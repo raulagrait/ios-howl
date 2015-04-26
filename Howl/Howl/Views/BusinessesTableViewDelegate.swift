@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesDelegate: NSObject, UITableViewDelegate {
+class BusinessesTableViewDelegate: NSObject, UITableViewDelegate {
     
     
     // To be placed in your UITableViewDelegate.
@@ -26,5 +26,9 @@ class BusinessesDelegate: NSObject, UITableViewDelegate {
         return contentView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
     }
     */
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
 
 }

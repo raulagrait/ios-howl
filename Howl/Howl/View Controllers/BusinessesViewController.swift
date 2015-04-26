@@ -24,7 +24,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         }
     }
     
-    var businessesDelegate: BusinessesDelegate!
+    var businessesTableViewDelegate: BusinessesTableViewDelegate!
     var businessesDataSource: BusinessesDataSource!
 
     // MARK: - Outlets
@@ -42,7 +42,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         hasDeals = false
         
         businessesDataSource = BusinessesDataSource()
-        businessesDelegate = BusinessesDelegate()
+        businessesTableViewDelegate = BusinessesTableViewDelegate()
         
         super.init(coder: aDecoder)
     }
@@ -54,7 +54,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         initializeSearchBar()
         
         tableView.dataSource = businessesDataSource
-        tableView.delegate = businessesDelegate
+        tableView.delegate = businessesTableViewDelegate
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 120
