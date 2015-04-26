@@ -12,6 +12,7 @@ class FiltersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barStyle = UIBarStyle.Black
 
         // Do any additional setup after loading the view.
     }
@@ -19,6 +20,10 @@ class FiltersViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
     @IBAction func onCancelTouched(sender: AnyObject) {

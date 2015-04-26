@@ -27,6 +27,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barStyle = UIBarStyle.Black
         
         searchTerm = ""
         initializeSearchBar()
@@ -44,6 +45,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
     func initializeSearchBar() {
         searchBar = UISearchBar()
