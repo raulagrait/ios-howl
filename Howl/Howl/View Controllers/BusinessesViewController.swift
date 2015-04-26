@@ -12,7 +12,18 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: - Data
     
-    var searchTerm: String!
+    var searchTerm: String! {
+        didSet {
+            load()
+        }
+    }
+    
+    var hasDeals: Bool! {
+        didSet {
+            load()
+        }
+    }
+    
     var businessesDataSource: BusinessesDataSource!
 
     // MARK: - Outlets
@@ -25,11 +36,16 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate {
 
     // MARK: - UIViewController
     
+    required init(coder aDecoder: NSCoder) {
+        searchTerm = ""
+        hasDeals = false
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barStyle = UIBarStyle.Black
         
-        searchTerm = ""
         initializeSearchBar()
         
         businessesDataSource = BusinessesDataSource()
@@ -58,13 +74,12 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate {
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         println(searchBar.text)
         searchTerm = searchBar.text
-        load()
     }
     
     // MARK: - Networking
     
     func load() {
-        Business.searchWithTerm(searchTerm, sort: .Distance, categories: nil, deals: false) { (businesses: [Business]?, error: NSError!) -> Void in
+        Business.searchWithTerm(searchTerm, sort: .Distance, categories: nil, deals: hasDeals) { (businesses: [Business]?, error: NSError!) -> Void in
             if let businesses = businesses {
                 self.businessesDataSource.businesses = businesses
                 self.tableView.reloadData()
