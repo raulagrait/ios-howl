@@ -13,14 +13,12 @@ class BusinessesDataSource: NSObject, UITableViewDataSource {
     var businesses: [Business]?
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        
-        if let businesses = businesses {
-            var business = businesses[indexPath.row]
-            cell.textLabel?.text = business.name!
+        if let cell = tableView.dequeueReusableCellWithIdentifier("BusinessCell", forIndexPath: indexPath) as? BusinessCell, businesses = businesses {
+            cell.business = businesses[indexPath.row]
+            return cell
         }
         
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

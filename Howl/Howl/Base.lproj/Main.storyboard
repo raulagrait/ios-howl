@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="173" id="r7J-aK-68o">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BusinessCell" rowHeight="173" id="r7J-aK-68o" customClass="BusinessCell" customModule="Howl" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r7J-aK-68o" id="rNR-6H-rc3">
@@ -70,6 +70,15 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="oen-Mf-eDy" id="UDz-Gd-qeE"/>
+                                            <outlet property="categoriesLabel" destination="Zuj-OV-Xis" id="Xx4-cW-ruG"/>
+                                            <outlet property="distanceLabel" destination="kue-ZO-y1e" id="Ia8-t7-esC"/>
+                                            <outlet property="nameLabel" destination="Xu8-3d-YkP" id="r7E-2Q-GiL"/>
+                                            <outlet property="ratingImageView" destination="7s5-ts-PNc" id="zsQ-Wr-Acl"/>
+                                            <outlet property="reviewCountLabel" destination="HXJ-7q-a6x" id="qMA-q3-vIk"/>
+                                            <outlet property="thumbnailImageView" destination="oYP-s4-zCP" id="NBM-np-ik7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
