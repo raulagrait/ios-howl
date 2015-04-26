@@ -10,6 +10,7 @@
 		551A04161AEB58780085A9A5 /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A04151AEB58780085A9A5 /* BusinessesViewController.swift */; };
 		551A04191AEB6C890085A9A5 /* BusinessesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A04181AEB6C890085A9A5 /* BusinessesDataSource.swift */; };
 		551A041C1AEC67900085A9A5 /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A041B1AEC67900085A9A5 /* BusinessCell.swift */; };
+		551A041E1AECC9630085A9A5 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551A041D1AECC9630085A9A5 /* FiltersViewController.swift */; };
 		558213541AE8B8750083636A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558213531AE8B8750083636A /* AppDelegate.swift */; };
 		558213591AE8B8750083636A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558213571AE8B8750083636A /* Main.storyboard */; };
 		5582135B1AE8B8750083636A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5582135A1AE8B8750083636A /* Images.xcassets */; };
@@ -35,6 +36,7 @@
 		551A04151AEB58780085A9A5 /* BusinessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
 		551A04181AEB6C890085A9A5 /* BusinessesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesDataSource.swift; sourceTree = "<group>"; };
 		551A041B1AEC67900085A9A5 /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		551A041D1AECC9630085A9A5 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		557C4BFB1AE8BB7700D3944F /* Howl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Howl-Bridging-Header.h"; sourceTree = "<group>"; };
 		5582134E1AE8B8750083636A /* Howl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Howl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		558213521AE8B8750083636A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				551A04151AEB58780085A9A5 /* BusinessesViewController.swift */,
+				551A041D1AECC9630085A9A5 /* FiltersViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				551A04161AEB58780085A9A5 /* BusinessesViewController.swift in Sources */,
 				5582137A1AE8BA290083636A /* YelpClient.swift in Sources */,
+				551A041E1AECC9630085A9A5 /* FiltersViewController.swift in Sources */,
 				551A04191AEB6C890085A9A5 /* BusinessesDataSource.swift in Sources */,
 				558213781AE8BA140083636A /* Business.swift in Sources */,
 				558213541AE8B8750083636A /* AppDelegate.swift in Sources */,

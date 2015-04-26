@@ -121,7 +121,13 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="qIf-ra-JYU" secondAttribute="bottom" id="vwF-he-Pmq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LN1-aw-pE7"/>
+                    <navigationItem key="navigationItem" id="LN1-aw-pE7">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="9T1-ft-hLB">
+                            <connections>
+                                <segue destination="jCb-db-kVr" kind="modal" id="xkl-k0-dWL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qIf-ra-JYU" id="tPA-uu-9Un"/>
                     </connections>
@@ -129,6 +135,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="765" y="335"/>
+        </scene>
+        <!--Filters-->
+        <scene sceneID="Tlj-EH-7nm">
+            <objects>
+                <viewController id="rxv-kZ-fiw" customClass="FiltersViewController" customModule="Howl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2t4-xg-A2k"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xmw-EO-7lZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mwj-o9-DUT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filters" id="bvx-JN-X1t">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="fy3-5b-pAp">
+                            <connections>
+                                <action selector="onCancelTouched:" destination="rxv-kZ-fiw" id="tBb-wt-VI0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJ9-BV-PyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="336"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ycf-m3-sle">
@@ -147,6 +178,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIW-Fv-eb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="233" y="335"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XH6-Wc-u7e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jCb-db-kVr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UTX-DG-eKb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rxv-kZ-fiw" kind="relationship" relationship="rootViewController" id="tS3-uV-q3U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEf-KX-tYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="336"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
