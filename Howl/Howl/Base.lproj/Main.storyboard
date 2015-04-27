@@ -71,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Seafood, Salad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zuj-OV-Xis">
-                                                    <rect key="frame" x="81" y="64" width="126" height="16"/>
+                                                    <rect key="frame" x="81" y="64" width="231" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -93,6 +93,7 @@
                                                 <constraint firstItem="oen-Mf-eDy" firstAttribute="leading" secondItem="oYP-s4-zCP" secondAttribute="trailing" constant="8" id="UT5-1U-qvb"/>
                                                 <constraint firstItem="oen-Mf-eDy" firstAttribute="leading" secondItem="Zuj-OV-Xis" secondAttribute="leading" id="XQp-gn-adI"/>
                                                 <constraint firstItem="Xu8-3d-YkP" firstAttribute="top" secondItem="rNR-6H-rc3" secondAttribute="top" constant="8" id="i32-vv-GFa"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zuj-OV-Xis" secondAttribute="trailing" constant="8" id="isd-fh-Df5"/>
                                                 <constraint firstItem="oen-Mf-eDy" firstAttribute="top" secondItem="7s5-ts-PNc" secondAttribute="bottom" constant="3" id="m16-jR-vLd"/>
                                                 <constraint firstItem="7s5-ts-PNc" firstAttribute="top" secondItem="Xu8-3d-YkP" secondAttribute="bottom" constant="4" id="mSZ-Uj-yRJ"/>
                                                 <constraint firstItem="7s5-ts-PNc" firstAttribute="centerY" secondItem="HXJ-7q-a6x" secondAttribute="centerY" id="okW-Qs-W3i"/>
