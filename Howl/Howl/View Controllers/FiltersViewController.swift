@@ -23,6 +23,11 @@ class FiltersViewController: UIViewController {
             filtersDataSource.hasDeals = hasDeals
         }
     }
+    var distanceIndex: Int {
+        didSet {
+            filtersDataSource.distanceIndex = distanceIndex
+        }
+    }
     
     var sortMode: YelpSortMode {
         didSet {
@@ -41,7 +46,9 @@ class FiltersViewController: UIViewController {
     
     required init(coder aDecoder: NSCoder) {
         hasDeals = false
+        distanceIndex = 0
         sortMode = YelpSortMode.BestMatched
+        
         filtersDataSource = FiltersDataSource()
         filtersTableViewDelegate = FiltersTableViewDelegate()
         super.init(coder: aDecoder)
@@ -56,6 +63,7 @@ class FiltersViewController: UIViewController {
         
         tableView.registerNib(UINib(nibName: "SwitchCell", bundle: nil), forCellReuseIdentifier: "SwitchCell")
         tableView.registerNib(UINib(nibName: "SortCell", bundle: nil), forCellReuseIdentifier: "SortCell")
+        tableView.registerNib(UINib(nibName: "DistanceCell", bundle: nil), forCellReuseIdentifier: "DistanceCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +83,7 @@ class FiltersViewController: UIViewController {
         
         var filters = [String: AnyObject]()
         filters["hasDeals"] = filtersDataSource.hasDeals
+        filters["distanceIndex"] = filtersDataSource.distanceIndex
         filters["sortMode"] = filtersDataSource.sortMode.rawValue
         delegate?.filtersViewController?(self, didUpdateFilters: filters)
         

@@ -20,6 +20,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
     
     var hasDeals: Bool!
     var sortMode: YelpSortMode!
+    var distanceIndex: Int!
     
     var businessesTableViewDelegate: BusinessesTableViewDelegate!
     var businessesDataSource: BusinessesDataSource!
@@ -38,6 +39,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         searchTerm = ""
         hasDeals = false
         sortMode = YelpSortMode.BestMatched
+        distanceIndex = 0
         
         businessesDataSource = BusinessesDataSource()
         businessesTableViewDelegate = BusinessesTableViewDelegate()
@@ -82,14 +84,11 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
     // MARK: - Networking
     
     func load() {
-        Business.searchWithTerm(searchTerm, sort: sortMode, categories: nil, deals: hasDeals) { (businesses: [Business]?, error: NSError!) -> Void in
+        let distance = FiltersDataSource.distance(fromDistanceIndex: distanceIndex)
+        Business.searchWithTerm(searchTerm, sort: sortMode, categories: nil, deals: hasDeals, distance: distance) { (businesses: [Business]?, error: NSError!) -> Void in
             if let businesses = businesses {
                 self.businessesDataSource.businesses = businesses
                 self.tableView.reloadData()
-                
-                for business in businesses {
-                    //println("name = \(business.name) address = \(business.address)")
-                }
             } else {
                 println(error)
             }
@@ -102,9 +101,13 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         if let hasDeals = filters["hasDeals"] as? Bool {
             self.hasDeals = hasDeals
         }
+        if let distanceIndex = filters["distanceIndex"] as? Int {
+            self.distanceIndex = distanceIndex
+        }
         if let sortMode = filters["sortMode"] as? Int {
             self.sortMode = YelpSortMode(rawValue: sortMode)
         }
+
         load()
     }
     
@@ -117,6 +120,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         var filtersViewController = navigationController.topViewController as! FiltersViewController
         filtersViewController.delegate = self
         filtersViewController.hasDeals = hasDeals
+        filtersViewController.distanceIndex = distanceIndex
         filtersViewController.sortMode = sortMode
         
         // Pass the selected object to the new view controller.

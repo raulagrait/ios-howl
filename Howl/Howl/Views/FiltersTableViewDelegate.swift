@@ -17,7 +17,7 @@ class FiltersTableViewDelegate: NSObject, UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        if indexPath.section == 2 {
+        if indexPath.section == 1 || indexPath.section == 2 {
             tableView.reloadData()
         }
     }
