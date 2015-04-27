@@ -21,6 +21,8 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
     var hasDeals: Bool!
     var sortMode: YelpSortMode!
     var distanceIndex: Int!
+    var categories: [String]!
+    var switchStates: [Int: Bool]!
     
     var businessesTableViewDelegate: BusinessesTableViewDelegate!
     var businessesDataSource: BusinessesDataSource!
@@ -39,7 +41,9 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         searchTerm = ""
         hasDeals = false
         sortMode = YelpSortMode.BestMatched
-        distanceIndex = 0
+        distanceIndex = 4
+        categories = [String]()
+        switchStates = [Int: Bool]()
         
         businessesDataSource = BusinessesDataSource()
         businessesTableViewDelegate = BusinessesTableViewDelegate()
@@ -85,7 +89,11 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
     
     func load() {
         let distance = FiltersDataSource.distance(fromDistanceIndex: distanceIndex)
-        Business.searchWithTerm(searchTerm, sort: sortMode, categories: nil, deals: hasDeals, distance: distance) { (businesses: [Business]?, error: NSError!) -> Void in
+        if searchTerm.isEmpty {
+            searchTerm = "Restaurants"
+        }
+        
+        Business.searchWithTerm(searchTerm, sort: sortMode, categories: categories, deals: hasDeals, distance: distance) { (businesses: [Business]?, error: NSError!) -> Void in
             if let businesses = businesses {
                 self.businessesDataSource.businesses = businesses
                 self.tableView.reloadData()
@@ -107,7 +115,13 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         if let sortMode = filters["sortMode"] as? Int {
             self.sortMode = YelpSortMode(rawValue: sortMode)
         }
-
+        if let switchStates = filters["switchStates"] as? [Int: Bool] {
+            self.switchStates = switchStates
+        }
+        if let categories = filters["categories"] as? [String] {
+            self.categories = categories
+        }
+        
         load()
     }
     
@@ -122,6 +136,7 @@ class BusinessesViewController: UIViewController, UISearchBarDelegate, FiltersVi
         filtersViewController.hasDeals = hasDeals
         filtersViewController.distanceIndex = distanceIndex
         filtersViewController.sortMode = sortMode
+        filtersViewController.switchStates = switchStates
         
         // Pass the selected object to the new view controller.
     }

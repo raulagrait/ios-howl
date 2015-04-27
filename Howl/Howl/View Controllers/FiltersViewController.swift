@@ -35,6 +35,18 @@ class FiltersViewController: UIViewController {
         }
     }
     
+    var categories: [[String: String]] {
+        didSet {
+            filtersDataSource.categories = categories
+        }
+    }
+    
+    var switchStates: [Int: Bool] {
+        didSet {
+            filtersDataSource.switchStates = switchStates
+        }
+    }
+    
     var filtersDataSource: FiltersDataSource!
     var filtersTableViewDelegate: FiltersTableViewDelegate!
 
@@ -48,6 +60,8 @@ class FiltersViewController: UIViewController {
         hasDeals = false
         distanceIndex = 0
         sortMode = YelpSortMode.BestMatched
+        categories = FiltersDataSource.yelpCategories()
+        switchStates = [Int: Bool]()
         
         filtersDataSource = FiltersDataSource()
         filtersTableViewDelegate = FiltersTableViewDelegate()
@@ -85,6 +99,19 @@ class FiltersViewController: UIViewController {
         filters["hasDeals"] = filtersDataSource.hasDeals
         filters["distanceIndex"] = filtersDataSource.distanceIndex
         filters["sortMode"] = filtersDataSource.sortMode.rawValue
+        
+        var selectedCategories = [String]()
+        for (row, isSelected) in filtersDataSource.switchStates {
+            if isSelected {
+                selectedCategories.append(categories[row]["code"]!)
+            }
+        }
+        filters["switchStates"] = filtersDataSource.switchStates
+        
+        if selectedCategories.count > 0 {
+            filters["categories"] = selectedCategories
+        }
+
         delegate?.filtersViewController?(self, didUpdateFilters: filters)
         
         dismissViewControllerAnimated(true, completion: nil)
@@ -99,5 +126,4 @@ class FiltersViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
